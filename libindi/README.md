@@ -1,0 +1,3 @@
+# libindi
+
+C++ library

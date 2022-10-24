@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libindi/
+}
+
+export $out_root/libindi/$import.target
