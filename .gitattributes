@@ -36,3 +36,39 @@
 # Use `binary` to make sure certain files are never auto-detected as text.
 #
 #*.png binary
+
+########################################################################
+#
+# For various reasons, build2 build system files are detected as Ruby
+# source code on GitHub.
+#
+# We have to manually force all build2 files to be recognized as build2
+# files.
+#
+# Unfortunately, build2 is not a recognized language by GitHub's
+# Linguist system (yet). There's nothing we can do about that (for now).
+# But, in the future, if build2's languages ever do become recognized,
+# we might need to differentiate between buildscript, testscript, the
+# manifests language, etc. (or, if we're lucky, we may be able to just
+# erase all manual language forcing, and build2 files will be correctly
+# detected automatically).
+
+# Manifests
+manifest                linguist-language=Build2
+packages.manifest       linguist-language=Build2
+repositories.manifest   linguist-language=Build2
+
+# Buildfile files
+buildfile linguist-language=Build2
+
+# Configuration files
+bootstrap.build     linguist-language=Build2
+config.build        linguist-language=Build2
+export.build        linguist-language=Build2
+root.build          linguist-language=Build2
+src-root.build      linguist-language=Build2
+out-root.build      linguist-language=Build2
+pre-bdep-sync.build linguist-language=Build2
+
+# Testscript files
+testscript  linguist-language=Build2
