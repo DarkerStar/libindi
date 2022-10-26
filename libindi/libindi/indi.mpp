@@ -17,19 +17,20 @@
  *                                                                     *
  **********************************************************************/
 
-module indi;
+export module indi;
 
-import <ostream>;
-import <stdexcept>;
+import <iosfwd>;
+import <string_view>;
+
+#ifndef __symexport
+#	define __symexport
+#endif // __symexport
 
 namespace indi {
 
-auto say_hello(std::ostream& o, std::string_view n) -> void
-{
-	if (n.empty())
-		throw std::invalid_argument{"empty name"};
-
-	o << "Hello, " << n << "!\n";
-}
+// Print a greeting for the specified name into the specified
+// stream. Throw std::invalid_argument if the name is empty.
+//
+export __symexport auto say_hello(std::ostream&, std::string_view) -> void;
 
 } // namespace indi

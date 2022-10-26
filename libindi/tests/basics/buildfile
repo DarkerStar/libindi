@@ -19,4 +19,4 @@
 
 import libs = libindi%lib{indi}
 
-exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}
+exe{driver}: {cxx}{**} $libs testscript{**}

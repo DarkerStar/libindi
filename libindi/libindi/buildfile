@@ -21,7 +21,7 @@ intf_libs = # Interface dependencies.
 impl_libs = # Implementation dependencies.
 #import xxxx_libs += libhello%lib{hello}
 
-lib{indi}: {hxx ixx txx cxx}{** -version} hxx{version} $impl_libs $intf_libs
+lib{indi}: {mxx hxx ixx txx cxx}{** -version} hxx{version} $impl_libs $intf_libs
 
 hxx{version}: in{version} $src_root/manifest
 
@@ -57,7 +57,7 @@ else
 # Install into the libindi/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
 #
-{hxx ixx txx}{*}:
+{mxx hxx ixx txx}{*}:
 {
   install         = include/libindi/
   install.subdirs = true

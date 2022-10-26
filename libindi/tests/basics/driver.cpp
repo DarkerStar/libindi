@@ -17,38 +17,34 @@
  *                                                                     *
  **********************************************************************/
 
-#include <sstream>
-#include <stdexcept>
-
-#include <libindi/version.hpp>
-#include <libindi/indi.hpp>
-
 #undef NDEBUG
 #include <cassert>
 
-int main ()
+import <sstream>;
+import <stdexcept>;
+
+import indi;
+
+auto main() -> int
 {
-  using namespace std;
-  using namespace indi;
+	// Basics.
+	//
+	{
+		auto o = std::ostringstream{};
+		indi::say_hello(o, "World");
+		assert(o.str() == "Hello, World!\n");
+	}
 
-  // Basics.
-  //
-  {
-    ostringstream o;
-    say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
-  }
-
-  // Empty name.
-  //
-  try
-  {
-    ostringstream o;
-    say_hello (o, "");
-    assert (false);
-  }
-  catch (const invalid_argument& e)
-  {
-    assert (e.what () == string ("empty name"));
-  }
+	// Empty name.
+	//
+	try
+	{
+		auto o = std::ostringstream{};
+		indi::say_hello(o, "");
+		assert (false);
+	}
+	catch (std::invalid_argument const& e)
+	{
+		assert(e.what() == std::string{"empty name"});
+	}
 }
