@@ -17,22 +17,22 @@
  *                                                                     *
  **********************************************************************/
 
-export module indi;
+export module indi:version;
 
-import <iosfwd>;
-import <string_view>;
+export namespace indi {
 
-export import :version;
+inline constexpr auto lib_version       = $libindi.version.project_number$uLL;
+inline constexpr auto lib_version_str   = "$libindi.version.project$";
+inline constexpr auto lib_version_id    = "$libindi.version.project_id$";
+inline constexpr auto lib_version_full  = "$libindi.version$";
 
-#ifndef __symexport
-#	define __symexport
-#endif // __symexport
+inline constexpr auto lib_version_major = $libindi.version.major$;
+inline constexpr auto lib_version_minor = $libindi.version.minor$;
+inline constexpr auto lib_version_patch = $libindi.version.patch$;
 
-namespace indi {
+inline constexpr auto lib_pre_release   = $libindi.version.pre_release$;
 
-// Print a greeting for the specified name into the specified
-// stream. Throw std::invalid_argument if the name is empty.
-//
-export __symexport auto say_hello(std::ostream&, std::string_view) -> void;
+inline constexpr auto lib_snapshot_sn   = $libindi.version.snapshot_sn$uLL;
+inline constexpr auto lib_snapshot_id   = "$libindi.version.snapshot_id$";
 
 } // namespace indi
