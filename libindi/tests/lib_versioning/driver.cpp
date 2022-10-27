@@ -17,22 +17,31 @@
  *                                                                     *
  **********************************************************************/
 
-export module indi;
+#undef NDEBUG
+#include <cassert>
 
-import <iosfwd>;
-import <string_view>;
+import <cstring>;
+import <type_traits>;
 
-export import :version;
+import indi;
 
-#ifndef __symexport
-#	define __symexport
-#endif // __symexport
+auto main() -> int
+{
+	// indi::lib_version
+	assert((std::is_same_v<std::remove_cvref_t<decltype(indi::lib_version)>, unsigned long long>));
 
-namespace indi {
+	// indi::lib_version_major
+	// indi::lib_version_minor
+	// indi::lib_version_patch
+	assert(indi::lib_version_major >= 0);
+	assert(indi::lib_version_minor >= 0);
+	assert(indi::lib_version_patch >= 0);
 
-// Print a greeting for the specified name into the specified
-// stream. Throw std::invalid_argument if the name is empty.
-//
-export __symexport auto say_hello(std::ostream&, std::string_view) -> void;
+	// indi::lib_version_str
+	assert(indi::lib_version_str != nullptr);
+	assert(std::strlen(indi::lib_version_str) > 0);
 
-} // namespace indi
+	// indi::lib_version_full
+	assert(indi::lib_version_full != nullptr);
+	assert(std::strlen(indi::lib_version_full) > 0);
+}
