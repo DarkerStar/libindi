@@ -1,0 +1,12 @@
+# Indi’s personal C++ library collection
+
+This project contains C++ libraries and code written by Indi for use in
+their own personal projects.
+
+Nothing in this project is intended for public use. There are no
+promises that there will be no bugs. There are no promises that using
+any package or code won’t damage your programming environment, or any
+run-time environments. There are no guarantees that packages or APIs
+will be stable. If you would like to use any code in this project,
+either directly, or as inspiration for your own code, you are welcome
+to… but use at your own risk.
