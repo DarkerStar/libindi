@@ -30,6 +30,8 @@ import <libindi/version.hpp>;
 
 export namespace indi {
 
+// libindi version information /////////////////////////////////////////
+
 inline constexpr auto lib_version       = LIBINDI_VERSION;
 inline constexpr auto lib_version_str   = LIBINDI_VERSION_STR;
 inline constexpr auto lib_version_id    = LIBINDI_VERSION_ID;
