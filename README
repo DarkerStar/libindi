@@ -1,5 +1,8 @@
 # Indi’s personal C++ library collection
 
+[![C++ version](https://img.shields.io/badge/c%2B%2B%20version-c%2B%2B20-brightgreen)](https://en.wikipedia.org/wiki/C%2B%2B20)
+[![Licence](https://img.shields.io/github/license/DarkerStar/libindi)](https://github.com/DarkerStar/libindi/blob/main/LICENSE)
+
 This project contains C++ libraries and code written by Indi for use in
 their own personal projects.
 
