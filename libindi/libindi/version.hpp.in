@@ -17,7 +17,8 @@
  *                                                                     *
  **********************************************************************/
 
-#pragma once
+#ifndef INDI_INC_version
+#define INDI_INC_version
 
 // The numeric version format is AAAAABBBBBCCCCCDDDE where:
 //
@@ -51,3 +52,5 @@
 
 #define LIBINDI_SNAPSHOT_SN   $libindi.version.snapshot_sn$ULL
 #define LIBINDI_SNAPSHOT_ID   "$libindi.version.snapshot_id$"
+
+#endif // include guard
