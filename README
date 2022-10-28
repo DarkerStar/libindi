@@ -10,3 +10,5 @@ run-time environments. There are no guarantees that packages or APIs
 will be stable. If you would like to use any code in this project,
 either directly, or as inspiration for your own code, you are welcome
 to… but use at your own risk.
+
+<!-- vim: syntax=Markdown -->
