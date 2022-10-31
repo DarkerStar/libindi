@@ -38,6 +38,12 @@
 #*.png binary
 
 ########################################################################
+# Documentation
+########################################################################
+
+README  linguist-language=Markdown
+
+########################################################################
 #
 # For various reasons, build2 build system files are detected as Ruby
 # source code on GitHub.
