@@ -1,0 +1,17 @@
+# Indi’s personal C++ library
+
+[![C++ version](https://img.shields.io/badge/c%2B%2B%20version-c%2B%2B20-brightgreen)](https://en.wikipedia.org/wiki/C%2B%2B20)
+[![Licence](https://img.shields.io/github/license/DarkerStar/libindi)](https://github.com/DarkerStar/libindi/blob/main/LICENSE)
+
+Indi’s personal C++ library, libindi is a library of C++ utilities
+written by Indi for use in their own personal projects.
+
+Nothing in this library is intended for public use. There are no
+promises that there will be no bugs. There are no promises that using
+this library won’t damage your programming environment, or any run-time
+environments. There are no guarantees that APIs will be stable. If you
+would like to use any code in this project, either directly, or as
+inspiration for your own code, you are welcome to… but use at your own
+risk.
+
+<!-- vim: syntax=Markdown -->

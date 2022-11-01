@@ -17,7 +17,7 @@
 #                                                                      #
 ########################################################################
 
-./: {*/ -build/} doc{README.md} manifest
+./: {*/ -build/} doc{README} doc{LICENSE} manifest
 
 # Don't install tests.
 #

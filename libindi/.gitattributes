@@ -1,0 +1,71 @@
+########################################################################
+#                                                                      #
+# This file is part of libindi.                                        #
+#                                                                      #
+# libindi is free software: you can redistribute it and/or modify it   #
+# under the terms of the GNU General Public License as published by    #
+# the Free Software Foundation, either version 3 of the License, or    #
+# (at your option) any later version.                                  #
+#                                                                      #
+# libindi is distributed in the hope that it will be useful, but       #
+# WITHOUT ANY WARRANTY; without even the implied warranty of           #
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                 #
+# See the GNU General Public License for more details.                 #
+#                                                                      #
+# You should have received a copy of the GNU General Public License    #
+# along with libindi.  If not, see <http://www.gnu.org/licenses/>.     #
+#                                                                      #
+########################################################################
+
+* text=auto
+
+########################################################################
+# Source code
+########################################################################
+
+*.mpp   linguist-language=C++
+
+########################################################################
+# Documentation
+########################################################################
+
+README  linguist-language=Markdown
+LICENSE linguist-language=Markdown
+
+########################################################################
+# Build2
+########################################################################
+
+# For various reasons, build2 build system files are detected as Ruby
+# source code on GitHub.
+#
+# We have to manually force all build2 files to be recognized as build2
+# files.
+#
+# Unfortunately, build2 is not a recognized language by GitHub's
+# Linguist system (yet). There's nothing we can do about that (for now).
+# But, in the future, if build2's languages ever do become recognized,
+# we might need to differentiate between buildscript, testscript, the
+# manifests language, etc. (or, if we're lucky, we may be able to just
+# erase all manual language forcing, and build2 files will be correctly
+# detected automatically).
+
+# Manifests
+manifest                linguist-language=Build2
+packages.manifest       linguist-language=Build2
+repositories.manifest   linguist-language=Build2
+
+# Buildfile files
+buildfile linguist-language=Build2
+
+# Configuration files
+bootstrap.build     linguist-language=Build2
+config.build        linguist-language=Build2
+export.build        linguist-language=Build2
+root.build          linguist-language=Build2
+src-root.build      linguist-language=Build2
+out-root.build      linguist-language=Build2
+pre-bdep-sync.build linguist-language=Build2
+
+# Testscript files
+testscript  linguist-language=Build2

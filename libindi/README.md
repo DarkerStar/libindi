@@ -1,3 +1,0 @@
-# libindi
-
-C++ library
